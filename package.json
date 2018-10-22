@@ -1,0 +1,43 @@
+{
+  "name": "vue-getting-started",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development concurrently \"npm run watch:webpack\" \"npm run watch:server\" ",
+    "watch:server": "nodemon --watch server --delay 50ms server/index.js",
+    "watch:webpack": "nodemon --watch webpack --delay 100ms -x webpack -- --watch --config webpack/webpack.config.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "concurrently": "^4.0.1",
+    "cross-env": "^5.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "nodemon": "^1.18.4",
+    "vue": "^2.5.17",
+    "vue-loader": "^15.4.2",
+    "vue-template-compiler": "^2.5.17",
+    "webpack": "^4.22.0",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-middleware": "^3.4.0",
+    "webpack-hot-middleware": "^2.24.3"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "connect-history-api-fallback": "^1.5.0",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "session-file-store": "^1.2.0"
+  }
+}
